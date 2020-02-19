@@ -9,6 +9,7 @@ from ship import Ship
 from alien import Alien
 import game_functions as gf
 
+
 def run_game():
     # Initialize pygame, settings,  and screen object.
     pygame.init()
@@ -28,7 +29,7 @@ def run_game():
     bullets = Group()
     aliens = Group()
 
-    # Create the fleet of alients.
+    # Create the fleet of aliens.
     gf.create_fleet(ai_settings, screen, ship, aliens)
 
     # Set colow background color.
@@ -40,7 +41,7 @@ def run_game():
     # Start the main loop for the game.
     while True:
         gf.check_events(ai_settings, screen, stats, play_button, ship, 
-            aliens, bullets)
+                        aliens, bullets)
 
         if stats.game_active:
             ship.update()
@@ -48,7 +49,7 @@ def run_game():
             gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
 
         gf.update_screen(ai_settings, screen, stats, ship, aliens, bullets, 
-            play_button)
+                         play_button)
+
 
 run_game()
-
