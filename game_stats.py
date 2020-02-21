@@ -12,10 +12,6 @@ class GameStats:
         # High score should never be reset.
         self.high_score = 0
 
-        self.ships_left = None
-        self.score = None
-        self.level = None
-
     def reset_stats(self):
         """Initialize statistics that can change during the game."""
         self.ships_left = self.ai_settings.ship_limit

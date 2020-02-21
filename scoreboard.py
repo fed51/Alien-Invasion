@@ -24,14 +24,6 @@ class Scoreboard:
         self.prep_level()
         self.prep_ships()
 
-        self.score_image = None
-        self.score_rect = None
-        self.high_score_image = None
-        self.high_score_rect = None
-        self.level_image = None
-        self.level_rect = None
-        self.ships = None
-
     def prep_score(self):
         """Turn the score into a rendered image."""
         rounded_score = int(round(self.stats.score, -1))
