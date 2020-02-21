@@ -1,10 +1,12 @@
 import pygame
+from pygame.sprite import Sprite
 
 
-class Ship:
+class Ship(Sprite):
     
     def __init__(self, ai_settings, screen):
         """Initialize the ship and set its starting position."""
+        super(Ship, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
@@ -20,7 +22,7 @@ class Ship:
         # Store a decimal value for the ship's center
         self.center = float(self.rect.centerx)
 
-        # Movement flag
+        # Movement flags.
         self.moving_right = False
         self.moving_left = False
 
